@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  overflow: hidden;
+   margin: 0;
+  overflow: auto;
   background-color: black;
-  color:white;
+   color:white;
 }

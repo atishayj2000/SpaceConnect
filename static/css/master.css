@@ -7,7 +7,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
   background: #191063;
   margin: 0;
 }

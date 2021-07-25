@@ -4,7 +4,6 @@ from django.urls import reverse_lazy
 from django.http import Http404
 from django.views import generic
 
-# pip install django-braces
 from braces.views import SelectRelatedMixin
 
 from . import forms
@@ -51,14 +50,13 @@ class PostDetail(SelectRelatedMixin, generic.DetailView):
 
 
 class CreatePost(LoginRequiredMixin, SelectRelatedMixin, generic.CreateView):
-    # form_class = forms.PostForm
-    fields = ('message','group')
+    form_class = forms.PostForm
     model = models.Post
 
-    # def get_form_kwargs(self):
-    #     kwargs = super().get_form_kwargs()
-    #     kwargs.update({"user": self.request.user})
-    #     return kwargs
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs.update({"user": self.request.user})
+        return kwargs
 
     def form_valid(self, form):
         self.object = form.save(commit=False)

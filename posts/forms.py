@@ -12,7 +12,5 @@ class PostForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if user is not None:
             self.fields["group"].queryset = (
-                models.Group.objects.filter(
-                    pk__in=user.groups.values_list("group__pk")
-                )
+                models.Group.objects.filter(members=user)
             )

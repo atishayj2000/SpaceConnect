@@ -10,12 +10,12 @@
 		</h2>
 
     {% endif %}
-			<h2>Groups</h2>
+			<h2>Threads</h2>
 
-			<p>Welcome to the Groups Page! <br>Select a Group with a shared interest!</p>
+			<p>Welcome to the Threads Page! <br>Select a Thread with a shared interest!</p>
 	</div>
 	{% if user.is_authenticated %}
-	<a href="{% url 'groups:create' %}" class="btn btn-warning" role="button"><span class="fa fa-plus"></span> Create New Group!</a>
+	<a href="{% url 'groups:create' %}" class="btn btn-warning" role="button"><span class="fa fa-plus"></span> Create New Thread!</a>
 	{% endif %}
 </div>
 {% endblock %}

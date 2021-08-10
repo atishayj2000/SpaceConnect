@@ -4,6 +4,8 @@ Space Connect is a web based forum for all discussions related to astronomy and 
 This website has been built by using the Django framework. It supports CRUD operations and makes use of Django's Class Based view and Mixins built into Django. \
 Users can create their accounts, create and exit various Threads and publish posts. They can also see all the posts of any user in post history.
 
+Website hosted at - http://spaceconnectdj.herokuapp.com
+
 Some Screenshots of the website are: \
 The Threads Page:
 
